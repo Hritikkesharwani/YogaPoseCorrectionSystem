@@ -21,10 +21,7 @@ export default function Home() {
 			<div className="container mx-auto px-48 py-32">
 				<div className="card lg:card-side bg-base-100 shadow-xl">
 					<figure>
-						<img
-							src="https://ipfs.io/ipfs/Qma46xggUp6Qf26SQgeiL1T88aonEK4mAAhaio3E9FpT7H?filename=frontbtpimg.png"
-							alt="Album"
-						/>
+						
 					</figure>
 					<div className="card-body">
 						<h2 className="card-title text-6xl font-black text-left">

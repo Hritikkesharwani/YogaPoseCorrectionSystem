@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Yoga from './Yoga'
 const Start = () => {
-    const [cameraAvailable, setCameraAvailable] = useState(false);
+    const [cameraAvailable, setCameraAvailable] = useState(true);
     const [model, setModel] = useState(null);
 
     useEffect(() => {

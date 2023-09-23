@@ -1,4 +1,4 @@
-import * as poseDetection from "@tensorflow-models/pose-detection";
+// import * as poseDetection from "@tensorflow-models/pose-detection";
 import * as tf from "@tensorflow/tfjs";
 import React, { useRef, useState, useEffect } from "react";
 // import backend from '@tensorflow/tfjs-backend-webgl'
@@ -32,7 +32,7 @@ let interval;
 // the pose as correct(probability more than threshold)
 let flag = false;
 
-function Yoga() {
+function Yoga({poseDetection = null}) {
 	const webcamRef = useRef(null);
 	const canvasRef = useRef(null);
 
@@ -132,6 +132,7 @@ function Yoga() {
 	}
 
 	const runMovenet = async () => {
+		if(!poseDetection) return;
 		const detectorConfig = {
 			modelType: poseDetection.movenet.modelType.SINGLEPOSE_THUNDER,
 		};

@@ -1,7 +1,5 @@
 .yoga-container {
 	background: linear-gradient(100deg, #94a3b8, #f1f5f9);
-	min-width: 100vw;
-	min-height: 100vh;
 }
 
 .secondary-btn {

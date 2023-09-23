@@ -6,20 +6,22 @@ const Start = () => {
 
     useEffect(() => {
         // Check for camera availability
+ // const devices = await navigator.mediaDevices.enumerateDevices();
+           // const cameras = devices.filter(device => device.kind === 'videoinput');
+               // If we successfully obtained a camera stream, it means a camera is available.
+              // Don't forget to stop the stream to release the camera when you're done.
         const checkCameraAvailability = async () => {
           try {
-           // const devices = await navigator.mediaDevices.enumerateDevices();
-           // const cameras = devices.filter(device => device.kind === 'videoinput');
+          
            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-            // If we successfully obtained a camera stream, it means a camera is available.
-              // Don't forget to stop the stream to release the camera when you're done.
-             console.log(stream);
-            if (!stream || !stream?.active) {
+        
+            
+            if (!stream) {
               // No cameras found
               setCameraAvailable(false);
             } else {
                 setCameraAvailable(true);
-                
+                console.log(stream);
               // Camera is available, proceed to import and initialize the model
                const poseDetection = await import("@tensorflow-models/pose-detection");
                setModel(poseDetection)
